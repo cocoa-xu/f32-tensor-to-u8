@@ -1,21 +1,13 @@
 # F32TensorToU8
 
-**TODO: Add description**
+Reproduce the issue observed in [evision#35](https://github.com/cocoa-xu/evision/pull/35)
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `f32_tensor_to_u8` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:f32_tensor_to_u8, "~> 0.1.0"}
-  ]
-end
+```shell
+mix deps.get
+mix test
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/f32_tensor_to_u8>.
+`test/f32-tensor.bin` is the binary data from a tensor with type `{:f, 32}` and shape `{714, 484, 3}`. 
+
+`test/f32_tensor_to_u8_test.exs` is the script to reproduce the linked issue.
 
